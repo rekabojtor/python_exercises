@@ -35,9 +35,10 @@ latte_cost = MENU["latte"]["cost"]
 cappuccino_cost = MENU["cappuccino"]["cost"]
 
 def check_resources(coffee_choice):
-    for item, amount in MENU[coffee_choice]["ingredients"].items():
-        if resources.get(item, 0) < amount:
-            print(f"Sorry, there is not enough {item}.")
+    coffee_ingredients = MENU[coffee_choice]["ingredients"]
+    for ingredient in coffee_ingredients:
+        if resources[ingredient] < coffee_ingredients[ingredient]:
+            print(f"Sorry, there is not enough {ingredient}.")
             return False
     return True
 
