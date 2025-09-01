@@ -80,12 +80,3 @@ while True:
         break
     else:
         print("Sorry, you typed in a non-existent drink.")
-
-
-
-
-
-
-
-
-
